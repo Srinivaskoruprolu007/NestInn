@@ -1,5 +1,5 @@
-import Navigation from "./_components/Navigation";
-import Logo from "./_components/Logo";
+import "@/app/_styles/globals.css";
+import Header from "./_components/Header";
 
 export const metadata = {
   title: "The Nestinn",
@@ -8,10 +8,9 @@ export const metadata = {
 const RootLayout = ({ children }) => {
   return (
     <html>
-      <body>
+      <body className="bg-primary-950 text-white">
         <header>
-          <Logo />
-          <Navigation />
+          <Header />
         </header>
         <main>{children}</main>
       </body>
