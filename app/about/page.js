@@ -1,6 +1,11 @@
 import Image from "next/image";
 import Link from "next/link";
+import about from "@/public/about.png";
+import about2 from "@/public/about-1.png";
 
+export const metadata = {
+  title: "About",
+};
 export default function Page() {
   return (
     <div className="grid grid-cols-5 gap-x-24 gap-y-32 text-lg items-center">
@@ -33,19 +38,17 @@ export default function Page() {
 
       <div className="col-span-2">
         <Image
-          src="/about-1.jpg"
+          src={about}
           alt="Guests enjoying a bonfire outside a cottage at NestInn"
-          width={600}
-          height={600}
         />
       </div>
 
-      <div className="col-span-2">
+      <div className="col-span-2 aspect-square relative">
         <Image
-          src="/about-2.jpg"
+          src="/about-1.png"
+          fill
+          className="object-cover"
           alt="The family that runs NestInn resort"
-          width={600}
-          height={600}
         />
       </div>
 

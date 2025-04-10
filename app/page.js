@@ -1,14 +1,16 @@
 import Image from "next/image";
 import Link from "next/link";
+import home from "@/public/bg.png";
 
 export default function Page() {
   return (
-    <main className="mt-24">
+    <main className="mt-20 ">
       <Image
-        src="/bg.png"
+        src={home}
+        fill
+        placeholder="blur"
+        className="object-cover object-top"
         alt="Mountains and forests with two cabins"
-        width={1920}
-        height={1080}
       />
 
       <div className="relative z-10 text-center">
@@ -17,7 +19,7 @@ export default function Page() {
         </h1>
         <Link
           href="/cabins"
-          className="bg-accent-500 px-8 py-6 text-primary-800 text-lg font-semibold hover:bg-accent-600 transition-all"
+          className="bg-accent-400 px-8 py-6 text-primary-800 text-lg font-semibold hover:bg-accent-600 transition-all"
         >
           Explore luxury cabins
         </Link>

@@ -6,10 +6,13 @@ const Logo = () => {
     <Link href="/" className="flex items-center gap-4 z-10 rounded-full">
       <Image
         height={"60"}
-        src="/logo.svg"
-        width={"120"}
+        src="/logo.png"
+        width={"60"}
         alt="The NestInn Logo"
       />
+      <span className="text-xl font-semibold text-primary-100">
+        The NestInn
+      </span>
     </Link>
   );
 };

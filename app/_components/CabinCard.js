@@ -49,3 +49,5 @@ const CabinCard = ({ cabin }) => {
     </div>
   );
 };
+
+export default CabinCard;
