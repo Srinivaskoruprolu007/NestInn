@@ -6,12 +6,15 @@ const CabinCard = ({ cabin }) => {
   const { id, name, maxCapacity, regularPrice, discount, image } = cabin;
 
   return (
-    <div className="flex border-primary-800 border">
-      <Image
-        src={image}
-        alt={`Image of cabin ${name}`}
-        className="flex-1 border-r border-primary-800"
-      />
+    <div className="flex border-primary-800 border relative">
+      <div className="flex-1 relative">
+        <Image
+          src={image}
+          alt={`Image of cabin ${name}`}
+          className="object-cover border-r border-primary-800 "
+          fill
+        />
+      </div>
       <div className="flex-grow">
         <div className="pt-5 pb-4 px-7 bg-primary-950">
           <h3 className="text-accent-500 font-semibold text-2xl mb-3">
@@ -43,7 +46,9 @@ const CabinCard = ({ cabin }) => {
           <Link
             href={`/cabins/${id}`}
             className="border-l border-primary-800 py-4 px-6 inline-block hover:bg-accent-600 transition-all hover-text-primary-950"
-          ></Link>
+          >
+            View details
+          </Link>
         </div>
       </div>
     </div>

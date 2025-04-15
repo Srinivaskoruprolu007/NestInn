@@ -1,5 +1,9 @@
 import ReservationCard from "@/app/_components/ReservationCard";
 
+export const metadata = {
+  title: "Your reservations",
+  description: "Your reservations at The NestInn",
+};
 export default function Page() {
   // CHANGE
   const bookings = [];
